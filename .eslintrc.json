@@ -1,0 +1,30 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "no-console": 2,
+    "quotes": [
+      2,
+      "double",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "markers": ["*", "?", "!"]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "crlf",
+        "singleQuote": false,
+        "trailingComma": "all",
+        "printWidth": 120
+      }
+    ]
+  }
+}
