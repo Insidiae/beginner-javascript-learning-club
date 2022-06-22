@@ -57,3 +57,30 @@ We also learn how JS handles equality. There are two ways to check equality in J
 Finally, we also learn the basics of functions in JS. For today, we only take a look into using buit-in JS functions (such as those `Math` helper methods) as well as how to create our own functions in JS. We'll take a much deeper dive on functions in the upcoming lectures!
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-2
+
+### Day 3: June 22, 2022
+
+**What we learned:**
+
+- More about Functions
+  - Parameters and Arguments
+  - Different ways to declare functions
+
+**My Notes:** In today's lectures, we take a deeper dive on JS functions. Here's a quick recap on today's topics:
+
+- **Anatomy of a JS Function**: Wes put together a neat cheatsheet that explains the different parts of a function. Check it out:
+  ![Wes Bos's Function Definition Diagram](https://raw.githubusercontent.com/wesbos/beginner-javascript/master/function-definition.jpg)
+- **Parameters/Arguments**: Can be passed into a function, which are then used like variables available within the function's scope. Parameters are the _placeholders_ (or the variable names) for the values to be passed to the function, while arguments are the _actual values_ passed to the function.
+- **Default Parameter Values**: Parameters can have default values assigned to them upon defining the function. This allows us to call the function without passing in any value to those parameters, as they will just fall back to using these default values when you don't explicitly pass them.
+- **Different ways to declare functions**:
+  - **Function Declaration**: The classic way to declare functions: (`function f() { /* ... */ }`)
+  - **Anonymous Function**: Functions without a name. Errors out on their own. Typically used as a quick way to pass functions into something else, such as callbacks: (`function() { /* ... */ }`)
+  - **Function Expression**: Stores the function as a value in a variable: (`const f = function() { /* ... */ }`)
+  - **Arrow Function**: A newer, more concise way to write functions: (`const f = () => { /* ... */ }`)
+- **Hoisting**: Basically the ability to call functions before they are actually declared. Only applies to regular function declarations - functions stored within variables (like function expressions) are NOT hoisted.
+- **IIFE**: Stands for **Immediately Invoked Function Expression**. IIFEs are functions that are immediately run upon declaration. Used to be a very popular way to call one-off functions in the old days of JS before it had modules and block scope.
+- **Methods**: Functions that live inside objects.
+- **`this`**: A reference to the object that it was called against. Especially useful when dealing with methods, and are basically the reason why you might or might not want to use arrow functions when declaring these methods.
+- **Callback Functions**: Functions that are called after something is done, such as handling user clicks or time based events such as `setTimeout()` or `setInterval()`.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-3
