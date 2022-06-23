@@ -84,3 +84,30 @@ Finally, we also learn the basics of functions in JS. For today, we only take a 
 - **Callback Functions**: Functions that are called after something is done, such as handling user clicks or time based events such as `setTimeout()` or `setInterval()`.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-3
+
+### Day 4: June 23, 2022
+
+**What we learned:** Debugging tools, Scope, Hoisting, and Closures
+
+**My Notes:**
+
+**Debugging Tools**
+We explore different ways to debug our JS apps. The most common way to debug JS apps is through `console.log()` (and its other flavors such as `info`/`warn`/`error`). Logging to the console also provides us a _stack trace_, where we can see the function call/s that triggered the `console.log()` and help identify where to look for bugs. We may also make use of breakpoints (via the `debugger` command or manually setting breakpoints via the devtools), where we can then run our code line-by-line to take a closer look on how our code runs. We can also look at the `Network` tab to see the network requests our code may be making, letting us know how long those network requests take and examine the data getting passed around on each request.
+
+**Scope**
+Today we explore the different kinds of scope we encounter in JS:
+
+- **Global Variables:** Exactly what it says on the tin. They are globally available, meaning they can be accessed anywhere within your application. In browser contexts, global variables are also attached to the `window` object, letting us reference them via `window.globalVariableName`.
+- **Function Scope:** Variables defined within a function are only available within the bounds of that function (and any other functions defined within that function, as we'll see when we explore closures later). If there are other variables with the same name defined in an upper scope (i.e. global variables), the variable defined within the function takes priority (This behavior is called _variable shadowing_, which you might see an ESLint error about when coding along with the lectures)
+- **Block Scope:** A unique behavior for variables defined using `let` or `const`. As the name implies, Block scoped variables are only accessible within the block they are defined in (usually between curly braces `{ }`). This is useful for preventing variables from unnecessarily leaking outside their containing blocks and potentially causing conflicts with other parts of the code.
+- **Lexical/Static Scope:** Describes the way JS looks up variable definitions. JS will look up variables starting from where the function is _defined_, rather than where the function is _actually being ran_.
+
+**Hoisting**
+We already somewhat covered this yesterday. Today, we just explore more practical examples where hoisting can be useful.
+
+**Closures**
+Wes sums up closures quite nicely:
+
+> Closures are the ability of a child (or inner) function to access variables from a higher level scope (i.e. from an outer function) even after the outer functions have been called or closed or closed over.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-4
