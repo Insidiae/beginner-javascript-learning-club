@@ -111,3 +111,23 @@ Wes sums up closures quite nicely:
 > Closures are the ability of a child (or inner) function to access variables from a higher level scope (i.e. from an outer function) even after the outer functions have been called or closed or closed over.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-4
+
+### Day 5: June 24, 2022
+
+**What we learned:** Basics of working with the DOM
+
+**My Notes:** Today we start to build tangible examples within the browser using JavaScript's Document Object Model (DOM). Using the DOM, we can select existing elements within the webpage using `document.querySelector()` to select a single element, or `querySelectorAll()` to get a list of all elements that match a corresponding CSS selector string passed to the method. There are also other methods to more explicitly select elements such as `getElementById()`, `getElementsByClassName()`, `getElementsByTagName()`, etc.
+
+With the ability to select elements, we can now also start manipulating the properties of that element and/or work with its built-in methods and see the results in the webpage. For example, here's how we can work with the text contained within the selected element:
+
+- `innerText`/`textContent`: Both can get (or set) the text contained within the selected element. The only difference is that `innerText` returns only the human readable content whereas `textContent` will get the contents of all of its child elements, including hidden elements and `<script>`/`<style>` elements.
+- `innerHTML`: Gets (or sets) the HTML content of the selected element, turning it into (or parsing it from) a string.
+- `insertAdjacentText()`: If you only want to append text content at the beginning or end of the selected element, this is a much easier way to do so (instead of using something like template strings).
+
+We can also work with CSS classes with an element's `classList` object. an element's `classList` object has useful methods to `add()` or `remove()` classes, or even `toggle()` classes on or off. You can also easily check if the element `contains()` a specific class!
+
+We can also work with other attributes for certain elements like `width`, `height`, or element-specific attributes like an `<img>` element's `alt` attribute. Elements have the `getAttribute()`, `setAttribute()`, and `hasAttribute()` methods which we can use to work with these attributes.
+
+While we can add our own custom attributes using the `setAttribute` method, this is a somewhat discourage practice because it is possible to for it to have conflicts when future HTML standards change. Instead, we can use an element's special `dataset` object where we can add our own custom attributes. The `dataset` object then takes these custom attributes and appends them with `data-`, e.g. `dataset.description` turns into `data-description` when you go and inspect the element.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-5
