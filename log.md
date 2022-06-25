@@ -131,3 +131,19 @@ We can also work with other attributes for certain elements like `width`, `heigh
 While we can add our own custom attributes using the `setAttribute` method, this is a somewhat discourage practice because it is possible to for it to have conflicts when future HTML standards change. Instead, we can use an element's special `dataset` object where we can add our own custom attributes. The `dataset` object then takes these custom attributes and appends them with `data-`, e.g. `dataset.description` turns into `data-description` when you go and inspect the element.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-5
+
+### Day 6: June 24, 2022
+
+**What we learned:** Different ways to create and manage DOM elements, and navigating through the DOM
+
+**My Notes:** We can create new DOM elements using the `document.createElement()` method. Though the newly-created DOM elements don't yet appear in the actual page, we can still modify their contents/attributes/etc. with the various methods we've covered yesterday. We can then make these new elements show up in the page by using the `appendChild()` (old) or `append()` (new) methods on an existing element. We can also use the `insertAdjacentElement()` method to easily add a sibling element similar to how we did using `insertAdjacentText()` yesterday.
+
+If creating individual elements using the above methods becomes too tedious, we can also write HTML elements using strings, and then use the `innerHTML` attribute or `insertAdjacentHTML()` method on an existing element to add the HTML to the page. We can even use template strings to interpolate variables in the HTML string! If for some reason we need to access some DOM node within a HTML string however, we'll need to parse the string first into a DOM fragment using the `document.createRange().createContextualFragment()` method.
+
+HTML strings should be used with caution however, as malicious users may be able to run malicious code if we do not sanitize the user inputs before turning them into these HTML strings. Wes also has a lecture all about security wwhich will explore this topic in-depth later in the course.
+
+We can also traverse through the DOM _elements_ (Actual HTML tags like `<div>`, ignoring text nodes) starting from an already selected element using these (self-explanatory) properties: `children`, `firstElementChild`, `lastElementChild`,`previousElementSibling`, `nextElementSibling`, and `parentElement`. We also have additional methods to traverse DOM _nodes_ (does NOT ignore text nodes): `childNodes`, `firstChild`, `lastChild`, `previousSibling`, `nextSibling`, and `parentNode`.
+
+Wes also introduces us to the **"Cardio"** exercises, which aims to let us practice through this section's material through a series of exercises that are all related to one another. This section's Cardio exercise covers the different DOM properties and methods we've learned starting from yesterday, and walks us through the general workflow for working with the DOM staring from creating an element, adding content/classes/attributes/etc., adding more elements as children/siblings, and creating dynamic HTML content by writing a function that accepts some variables to be interpolated into the HTML string.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-6
