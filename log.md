@@ -132,7 +132,7 @@ While we can add our own custom attributes using the `setAttribute` method, this
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-5
 
-### Day 6: June 24, 2022
+### Day 6: June 25, 2022
 
 **What we learned:** Different ways to create and manage DOM elements, and navigating through the DOM
 
@@ -147,3 +147,21 @@ We can also traverse through the DOM _elements_ (Actual HTML tags like `<div>`, 
 Wes also introduces us to the **"Cardio"** exercises, which aims to let us practice through this section's material through a series of exercises that are all related to one another. This section's Cardio exercise covers the different DOM properties and methods we've learned starting from yesterday, and walks us through the general workflow for working with the DOM staring from creating an element, adding content/classes/attributes/etc., adding more elements as children/siblings, and creating dynamic HTML content by writing a function that accepts some variables to be interpolated into the HTML string.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-6
+
+### Day 7: June 26, 2022
+
+**What we learned:** Working with event listeners, the `event` object, and event propagation.
+
+**My Notes:** We've seen a preview of this topic on the past lectures and exercises, but today we officially learn about event listeners!
+
+We can add an event listener to an element using the `addEventListener()` method, and passing it the event we want to listen for (`"click"`, `"mousemove"`, etc.) and a **_callback function_**, which is a function that gets called when the user triggers the event.
+
+If we want to listen to events for multiple elements at once (i.e. elements returned by `document.querySelectorAll()`), we'll need to loop over the elements, or use the `forEach()` method to add the event listeners to the individual elements.
+
+Of course, event listeners are nothing without the actual _events_ that we need to deal with! The callback function we passed in `addEventListener` will actually get called with an `event` parameter, which is an object containing several useful details about the actual event being triggered (like the screen coordinates where the user has clicked/moved their mouse on). More importantly, the `event` object also contains the `target` (which element triggered the event?) and `currentTarget` (which element is the event listener attached to?) attributes.
+
+We also learn about **_event propagation_**, where events "bubble" up to the top of the DOM tree and triggers relevant event listeners along the way. We can take advantage of this by adding a third argument to our `addEventListener()` call, passing an object which can have multiple options such as `capture`. Setting `capture: true` lets us fire off the event at the _capture phase_ (going down from the top of the DOM to the actual element that triggered the event) rather than the _bubble phase_ (going from the element that triggered the event to the top of the DOM). If we want to stop the event from bubbling up (or down in the capture phase), we can also add `event.stopPropagation()` within our callback function.
+
+Finally, we get a preview of the `this` keyword. When we inspect `this` within our event listener, we'll see that it (ideally) points to the element that the listener is attached to (similar to `event.currentTarget`). However when we use an arrow function as our callback function, `this` will instead point to the parent scope (like an outer nested function or the `window` object). We'll learn more about `this` in the upcoming sections!
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-7
