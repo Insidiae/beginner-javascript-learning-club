@@ -165,3 +165,11 @@ We also learn about **_event propagation_**, where events "bubble" up to the top
 Finally, we get a preview of the `this` keyword. When we inspect `this` within our event listener, we'll see that it (ideally) points to the element that the listener is attached to (similar to `event.currentTarget`). However when we use an arrow function as our callback function, `this` will instead point to the parent scope (like an outer nested function or the `window` object). We'll learn more about `this` in the upcoming sections!
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-7
+
+### Day 8: June 27, 2022
+
+**What we built:** An Etch-a-Sketch app using the HTML5 Canvas
+
+**My Notes:** We have our first "real-world" application exercise today! The Etch-a-Sketch app project showcases the previous topics we've covered so far, from the basic JS fundamentals to working with events on DOM elements, in a more challenging context (heh) with the HTML5 Canvas API. We also get a preview of some of the later topics such as flow control using `switch` and destructuring.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-8
