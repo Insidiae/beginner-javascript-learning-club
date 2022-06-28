@@ -173,3 +173,19 @@ Finally, we get a preview of the `this` keyword. When we inspect `this` within o
 **My Notes:** We have our first "real-world" application exercise today! The Etch-a-Sketch app project showcases the previous topics we've covered so far, from the basic JS fundamentals to working with events on DOM elements, in a more challenging context (heh) with the HTML5 Canvas API. We also get a preview of some of the later topics such as flow control using `switch` and destructuring.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-8
+
+### Day 9: June 28, 2022
+
+**What we built:**
+
+- A modal that can be dismissed by clicking outside
+- A button that is disabled until you fully scroll through some content
+- Accessible tab panels
+
+**My Notes:** We get some more practice on the previous topics with these exercises:
+
+- **Click-Outside Modal:** We practiced adding event listeners into DOM elements and adding dynamic content by using a templateString as the modal's `innerHTML`.
+- **Scroll-to-Accept:** We take our event listener workflow and apply it into the new `IntersectionObserver` API.
+- **Tabs:** We practiced getting/setting attributes on elements, and learned how we can make use of `ARIA` attributes and use them in our JS code to make our components more accessible.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-9
