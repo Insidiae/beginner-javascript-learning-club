@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>If Statements</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <h2>Truthy Values</h2>
+    <ul>
+      <li>1</li>
+      <li>-10</li>
+      <li>full string</li>
+      <li>a string of "0"</li>
+      <li>empty array</li>
+      <li>empty object</li>
+    </ul>
+
+    <h2>Falsy Values</h2>
+    <ul>
+      <li>0</li>
+      <li>undefined variable</li>
+      <li>Variable set to null</li>
+      <li>a variable set to <code>"hello" - 10</code> (NaN)</li>
+      <li>empty string</li>
+    </ul>
+    <script>
+      //* Part 1
+      // eslint-disable-next-line
+      console.groupCollapsed(
+        "Flow Control - If Statements, Function Returns, Truthy, Falsy"
+      );
+      const age = 100;
+      if (age > 70) {
+        console.log("In your seventies");
+      } else if (age > 60) {
+        console.log("In your sixties");
+      } else if (age > 50) {
+        console.log("In your 50s");
+      } else {
+        console.log("Nothing was true");
+      }
+
+      function slugify(sentence, lowercase) {
+        const slug = sentence.replace(/\s/g, "-");
+        if (lowercase) {
+          return slug.toLowerCase();
+        }
+        return slug;
+      }
+
+      const first = "wes";
+      const last = "bos";
+
+      if (first === "scott" || (first === "wes" && last === "bos")) {
+        console.log("Coool Name!");
+      }
+
+      const isAwesomeName = "awesome".includes(first);
+      if (isAwesomeName) {
+        console.log("SUPER COOL AWESOME NAME");
+      }
+
+      function nameIsAwesome(name) {
+        return "awesome".includes(name);
+      }
+
+      if (nameIsAwesome("wes")) {
+        console.log("COOL NAME WES");
+      }
+
+      // const dog = "snickers";
+      const dog = "";
+
+      if (dog) {
+        console.log("You have a dog");
+      } else {
+        console.log("You don't have a dog");
+      }
+
+      // const score = 0;
+      const score = {};
+
+      if (score) {
+        console.log("There is a score already");
+      } else {
+        console.log("No score yet");
+      }
+
+      // eslint-disable-next-line
+      const values = [
+        [],
+        {},
+        -10,
+        1,
+        0,
+        "",
+        "full string",
+        " ",
+        undefined,
+        NaN,
+        null,
+        "0️⃣",
+        "💩",
+      ];
+
+      console.group("truthy or falsy values");
+      values.forEach((value) => {
+        if (value) {
+          console.log(value, "is truthy");
+        } else {
+          console.log(value, "is falsy");
+        }
+      });
+      console.groupEnd();
+
+      //* End Part 1
+      console.groupEnd();
+
+      //* Part 2
+      console.group("Coercion, Ternaries and Conditional Abuse");
+      // Coercion
+      const isCool = true;
+
+      if (!isCool) {
+        console.log("You are not cool");
+      }
+
+      // Ternary Operator
+      const count = 5234234;
+      // let word;
+      // if (count === 1) {
+      //   word = 'item';
+      // } else {
+      //   word = 'items';
+      // }
+      // becomes:
+      const word = count === 1 ? "item" : "items";
+
+      // eslint-disable-next-line
+      const mySentence = `You have ${count} item${
+        count === 1 ? "" : "s"
+      } in your cart`;
+      console.log(mySentence);
+
+      function showAdminBar() {
+        console.log("Showing admin bar");
+      }
+      const isAdmin = false;
+      // isAdmin ? showAdminBar() : null;
+
+      // Chaining conditions
+      function check1() {
+        console.log("Running check 1");
+        return true;
+      }
+      function check2() {
+        console.log("Running check 2");
+        return false;
+      }
+      function check3() {
+        console.log("Running check 3");
+        return true;
+      }
+
+      if (check1() && check2() && check3()) {
+        console.log("all checks passed");
+      } else {
+        console.log("Some checks failed");
+      }
+
+      // Blockless `if` statements
+      // isAdmin ? showAdminBar() : null;
+      //? is equivalent to:
+      // isAdmin && showAdminBar();
+      //? is also equivalent to:
+      if (isAdmin) {
+        showAdminBar();
+      }
+
+      console.groupEnd();
+
+      /*
+        eslint
+          no-unused-vars: "off",
+          no-constant-condition: "off",
+          no-console: "off",
+      */
+    </script>
+  </body>
+</html>

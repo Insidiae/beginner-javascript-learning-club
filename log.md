@@ -189,3 +189,19 @@ Finally, we get a preview of the `this` keyword. When we inspect `this` within o
 - **Tabs:** We practiced getting/setting attributes on elements, and learned how we can make use of `ARIA` attributes and use them in our JS code to make our components more accessible.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-9
+
+### Day 10: June 29, 2022
+
+**What we learned:** The basics of logic and flow control in JavaScript
+
+**My Notes:**
+
+In today's lectures, we learned how to add logic into our JS code by using `if`/`else` blocks to conditionally run code. As their name implies, `if` blocks only run the code within its block if the condition passed into it is truthy (more about that later), otherwise the block gets skipped and the code within the `else` block gets run instead.
+
+We can also use the AND (`&&`) and `OR` (`||`) operators to chain multiple conditions. `&&` resolves as `true` only if both conditions are truthy, otherwise it resolves as `false`. `||` resolves as `true` if at least one of the conditions is truthy, otherwise it resolves as `false`. We can also use the `!` operator to turn `true` into `false`, and vice versa.
+
+What are truthy (and/or falsy) values, you might ask? Truthy values are values that resolve (or _coerce_) as `true`, and falsy values are values that resolve as `false`. `undefined`, `null`, `NaN`, and empty strings (`""`) are considered _falsy_ values, everything else is truthy (including empty arrays (`[]`) and objects (`{}`)).
+
+We can also make simple `if`/`else` blocks a bit quicker using the ternary operator (`?` with `:`). The ternary operator requires: (1) A condition, (2) What to do if the condition is truthy, and (3) What to do if the condition is falsy. Ternary operators allow us to simplify `if`/`else` blocks into one line, and even put them within other expressions!
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-10
