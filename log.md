@@ -205,3 +205,21 @@ What are truthy (and/or falsy) values, you might ask? Truthy values are values t
 We can also make simple `if`/`else` blocks a bit quicker using the ternary operator (`?` with `:`). The ternary operator requires: (1) A condition, (2) What to do if the condition is truthy, and (3) What to do if the condition is falsy. Ternary operators allow us to simplify `if`/`else` blocks into one line, and even put them within other expressions!
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-10
+
+### Day 11: June 30, 2022
+
+**What we learned:**
+
+- Flow control using `switch`/`case`
+- `setInterval()`/`setTimeout()`
+- Objects
+
+**My Notes:**
+
+We've seen this briefly during the Etch-a-Sketch project, but another way to write conditional code in JS is using `switch`/`case` blocks. Here, the multiple `case`s serve as a more concise substitute to chained `if`/`else if`/`else` blocks.
+
+We can also run delayed code using `setTimeout()` and `setInterval()`. Like their names imply, `setTimeout()` runs its callback function _only once_ after a specified amount of time, while `setInterval()` _repeatedly_ runs the callback with the specified interval time.
+
+We also take a closer look at objects in JS. Objects are the fundamental building blocks of JS, allowing us to group together properties and values (also called _"key-value pairs"_). We can also add functions (now called _methods_ in this case) into objects to make use of the `this` keyword to access the object's properties within the method. Throughout the course, we'll be using objects to neatly group together some collections of properties, values, and methods into a easily accessible reference.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-11

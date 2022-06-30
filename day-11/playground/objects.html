@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <input type="text" name="first" value="wes" />
+
+    <script>
+      const age = 100;
+      const wes = {
+        age,
+        name: "wes",
+        propertyToCheck: "NEVER",
+        "cool-dude": true,
+        "really cool": false,
+        777: true,
+        dog: "snicker",
+        clothing: {
+          shirts: 10,
+          pants: 2,
+        },
+        sayHello(greeting = "Hey") {
+          console.log(this);
+          return `${greeting} ${this.name}`;
+        },
+        sneeze: () => {
+          console.log("AHHHH CHOOO", this);
+        },
+      };
+
+      wes.job = "Web Developer";
+      wes.age = 50;
+
+      console.log(wes.age);
+
+      // const wesFroze = Object.freeze(wes);
+      // wesFroze.age = 100;
+      // console.log(wesFroze.age);
+
+      // const propertyToCheck = prompt('What do you want to check?');
+      // console.log(propertyToCheck);
+      // console.log(wes[propertyToCheck]);
+
+      const nameInput = document.querySelector('[name="first"]');
+      const name = nameInput ? nameInput.value : "";
+      console.log(name);
+
+      console.log(delete wes.job);
+      wes.age = undefined;
+      wes.age = null;
+
+      /*
+        eslint
+          no-unused-vars: "off",
+          no-console: "off",
+      */
+    </script>
+  </body>
+</html>
