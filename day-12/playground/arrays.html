@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title> </title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <script>
+      const names = ["wes", "kait", "snickers"];
+
+      //* Accessing items in an array
+      console.log(names[0]);
+      console.log(names.length);
+      console.log(names[names.length - 1]);
+
+      //* Mutable vs. Immutable
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      //! Mutable methods *mutate* the array, changing the actual values inside
+      // const numbersBackwards = numbers.reverse();
+      // console.log(numbersBackwards);
+      // console.log(numbers);
+
+      //? Create a copy first, and then reverse it!
+      const numbersBackwards = [...numbers].reverse();
+      console.log(numbersBackwards);
+      console.log(numbers);
+
+      //? Immutable methods DO NOT change the actual values inside the array
+      const pizzaSlice = numbers.slice(2, 5);
+      console.log(pizzaSlice);
+      console.log(numbers);
+
+      //* Adding items into an array
+      names.push("lux");
+      console.log(names);
+      const names2 = [...names, "lux"];
+      names.unshift("poppy");
+      console.log(names);
+      const names3 = ["poppy", ...names];
+      console.log(names3);
+
+      //* `Array.slice()`
+      const bikes = ["bianchi", "miele", "panasonic", "miyata"];
+      const newBikes = [
+        ...bikes.slice(0, 2), // get the previous items
+        "benotto", // insert the new item
+        ...bikes.slice(2), // add the remaining items
+      ];
+
+      const newBikes2 = [
+        ...newBikes.slice(0, 3), // get the previous items
+        ...newBikes.slice(4), // get the items after the ones to be removed
+      ];
+      console.log(newBikes2);
+
+      //* Removing specific items
+      const kaitIndex = names.findIndex((name) => name === "kait");
+      const newNamesWithOutKait = [
+        // get everything up to kait index
+        ...names.slice(0, kaitIndex),
+        // everything after Kait index
+        ...names.slice(kaitIndex + 1),
+      ];
+      console.log(newNamesWithOutKait);
+
+      const myComments = [
+        { text: "Cool Beans", id: 123 },
+        { text: "Love this", id: 133 },
+        { text: "Neato", id: 233 },
+        { text: "good bikes", id: 333 },
+        { text: "so good", id: 433 },
+      ];
+
+      function deleteComment(id, comments) {
+        // first find the index of the item in the array
+        const commentIndex = comments.findIndex((comment) => comment.id === id);
+        // make a new array without that item in it
+        // return our new array
+        return [
+          ...comments.slice(0, commentIndex), // get the previous items
+          ...comments.slice(commentIndex + 1), // get the items after the ones to be removed
+        ];
+      }
+
+      /*
+        eslint
+          no-unused-vars: "off",
+          no-console: "off",
+      */
+    </script>
+  </body>
+</html>

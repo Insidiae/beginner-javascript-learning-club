@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Maps</title>
+    <link rel="stylesheet" href="../../base.css" />
+  </head>
+
+  <body>
+    <ul class="prizes"></ul>
+
+    <script>
+      const myMap = new Map();
+
+      const person1 = {
+        name: "wes",
+        age: 200,
+      };
+
+      //* `Map.set()`
+      myMap.set("name", "wes");
+      myMap.set(100, "This is a number");
+      myMap.set(person1, "Really Cool");
+      console.log(myMap);
+
+      //* `Map.get()`
+      console.log(myMap.get(person1));
+
+      const score = 200;
+      const prizes = new Map();
+      prizes.set(100, "Bear");
+      prizes.set(200, "Duck");
+      prizes.set(300, "Car");
+      console.log(`you win a ${prizes.get(score)}`);
+
+      //* A Map maintains insertion order
+      const ul = document.querySelector(".prizes");
+      // prizes.forEach((prize, points) => {
+      //   const li = `<li>${points} - ${prize}</li>`;
+      //   ul.insertAdjacentHTML("beforeend", li);
+      // });
+
+      for (const [points, prize] of prizes) {
+        const li = `<li>${points} - ${prize}</li>`;
+        ul.insertAdjacentHTML("beforeend", li);
+      }
+
+      //* Objects, Maps, and JSON
+      const person1JSON = JSON.stringify(person1);
+      console.log(person1JSON);
+      console.log(JSON.parse(person1JSON));
+
+      console.log(JSON.stringify(myMap));
+
+      const myObject = Object.fromEntries(myMap);
+      console.log(myObject);
+
+      /*
+        eslint
+          no-unused-vars: "off",
+          no-console: "off",
+      */
+    </script>
+  </body>
+</html>

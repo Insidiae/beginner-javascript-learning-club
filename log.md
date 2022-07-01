@@ -223,3 +223,19 @@ We can also run delayed code using `setTimeout()` and `setInterval()`. Like thei
 We also take a closer look at objects in JS. Objects are the fundamental building blocks of JS, allowing us to group together properties and values (also called _"key-value pairs"_). We can also add functions (now called _methods_ in this case) into objects to make use of the `this` keyword to access the object's properties within the method. Throughout the course, we'll be using objects to neatly group together some collections of properties, values, and methods into a easily accessible reference.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-11
+
+### Day 12: July 1, 2022
+
+**What we learned:** A deep dive into Objects, Maps, and Arrays in JS
+
+**My Notes:**
+
+Continuing from yesterday's lectures, we take a closer look at JS Objects and the difference between a value and a reference. We see that primitive data types (i.e. strings, numbers) are stored as values while objects are stored via reference, meaning that when two variables point to the same object, any changes made using one of the variables as reference will also reflect on the other variable.
+
+We also explore different options to make "safe" copies of an object without running into these reference issues. We can use the spread (`...`) operator to make a shallow copy (nested objects may have the same reference issue) of an object's contents into a separate variable. To make a deep copy of an object (ensuring all nested objects point to a new reference), we can use external libraries like Lodash (with its `_.cloneDeep()` method) instead of manually copying each nested object.
+
+We also briefly talk about Maps, which is a data type functionally similar to objects but with some key differences such as being able to use other data types (even objects) as keys, preserving insertion order, and some more under-the-hood performance optimizations.
+
+Finally we also talk about Arrays, which is a data type for storing _ordered_ collections of data. We learned how to use index numbers to access data inside an array. We also explore the most common array methods for inserting and removing data into an array, and briefly talk about _mutable_ (changes the data inside the array) and _immutable_ (DOES NOT change the data inside the array, instead typically creating a new copy) methods.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-12
