@@ -239,3 +239,41 @@ We also briefly talk about Maps, which is a data type functionally similar to ob
 Finally we also talk about Arrays, which is a data type for storing _ordered_ collections of data. We learned how to use index numbers to access data inside an array. We also explore the most common array methods for inserting and removing data into an array, and briefly talk about _mutable_ (changes the data inside the array) and _immutable_ (DOES NOT change the data inside the array, instead typically creating a new copy) methods.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-12
+
+### Day 13: July 2, 2022
+
+**What we learned:** Lots and lots of array methods
+
+**My Notes:**
+
+Arrays have way too many methods to reasonably fit into regular course lectures. So instead of walking us through every single array method one by one, today's series of cardio exercises walks us through the most useful ones we'll be using when dealing with most common types of array data:
+
+- **Static Methods**
+  - `Array.of()`
+  - `Array.from()`
+  - `Array.isArray()`
+  - `Object.keys()`
+  - `Object.values()`
+  - `Object.entries()`
+- **Instance Methods**
+  - `join()`
+  - `split()`
+  - `push()`
+  - `pop()`
+  - `unshift()`
+  - `shift()`
+  - `slice()`
+  - `splice()`
+  - `indexOf()`/`lastIndexOf()`
+  - `includes()`
+  - `reverse`
+- **Callback Methods**
+  - `find()`
+  - `filter()`
+  - `some()`
+  - `every()`
+  - `sort()`
+
+I highly recommend going through these cardio exercises yourself to see these array methods in action!
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-13
