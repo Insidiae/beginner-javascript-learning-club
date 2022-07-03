@@ -277,3 +277,20 @@ Arrays have way too many methods to reasonably fit into regular course lectures.
 I highly recommend going through these cardio exercises yourself to see these array methods in action!
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-13
+
+### Day 14: July 3, 2022
+
+**What we learned:** Array `forEach()`, `map()`, `filter()`, and `find()` methods
+
+**My Notes:**
+
+We take a closer look at some of the common methods we use for looping through an array:
+
+- `forEach()` - We've been using this one quite a bit now! This method simply runs the callback function for every item in the array. `forEach()`, and actually most of the other array methods used for looping through an array, pass three things to the callback function: (1) the current item, (2) the _index_ of the current item, and (3) a reference to the array itself.
+- `map()` - This method also runs a callback function for every item in the array. However, the callback function must now return something (e.g. transforming the current item into another value). `map()` then returns _a new array_ containing the transformed items.
+- `filter()` - Returns _a new array_ containing all of the items that satisfy the given condition in the callback function.
+- `find()` - Returns _a single item_ that satisfies the given condition in the callback function.
+
+We also learned how to take advantage of **Higher Order Functions** to write more flexible code when dealing with multiple similar conditions, i.e. generating callback functions to `find()`/`filter()` by property in a complex object.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-14
