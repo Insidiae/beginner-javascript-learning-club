@@ -294,3 +294,20 @@ We take a closer look at some of the common methods we use for looping through a
 We also learned how to take advantage of **Higher Order Functions** to write more flexible code when dealing with multiple similar conditions, i.e. generating callback functions to `find()`/`filter()` by property in a complex object.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-14
+
+### Day 15: July 4, 2022
+
+**What we learned:** `Array.reduce()`, `for` loops, and `while` loops
+
+**My Notes:**
+
+The Array `reduce()` method still loops through the whole array and calls a callback function each time, but only returns a single value. The callback function manages what happens to that single value for every item in the array. This method is useful for a wide variety of things such as tallying up a total value for an array of numbers, counting the frequency of certain object properties, and so much more. We also have an exercise today where we used `reduce()` to count the frequency of every alphanumeric letter in an MDN docs page.
+
+We also learn other ways to loop in JS:
+
+- **`for` loop** - Requires three things: (1) an initial expression, (2) a condition, and (3) something to change that initial expression. The loop runs until the specified condition becomes `false`.
+- **`while` loop** - Runs some code depending on a condition similar to an `if` block, but runs the code over and over until the condition becomes `false`.
+- **`for...of` loop** - Similar to the Array `forEach()` method, this also loops over every single item. However, this can also loop on other iterables such as strings or maps.
+- **`for...in` loop** - Loops over every key in an object. Unlike looping with `Object.keys()`, this also checks the object's prototype chain for other keys.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-15
