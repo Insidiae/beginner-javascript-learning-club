@@ -311,3 +311,13 @@ We also learn other ways to loop in JS:
 - **`for...in` loop** - Loops over every key in an object. Unlike looping with `Object.keys()`, this also checks the object's prototype chain for other keys.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-15
+
+### Day 16: July 5, 2022
+
+**What we've built:** An app that detects (and censors) faces using the Experimental `FaceDetector` API
+
+**My Notes:**
+
+In today's project, we practice more with the HTML5 Canvas to display the user's webcam footage. We also check out the experimental `FaceDetector` API to, well, detect the user's face and then do some fun stuff like censoring the user's face by shrinking and then rescaling back to pixelate their face.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-16
