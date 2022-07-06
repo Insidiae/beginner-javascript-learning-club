@@ -321,3 +321,13 @@ We also learn other ways to loop in JS:
 In today's project, we practice more with the HTML5 Canvas to display the user's webcam footage. We also check out the experimental `FaceDetector` API to, well, detect the user's face and then do some fun stuff like censoring the user's face by shrinking and then rescaling back to pixelate their face.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-16
+
+### Day 17: July 6, 2022
+
+**What we've built:** sArCaStIc tExT GeNeRaToR
+
+**My Notes:**
+
+Today's project was a fun exercise that uses the array methods we've learned to transform some given text into _sArCaStIc tExT_. We also added a few more fun options like transforming each letter into weird Unicode characters and randomly adding pauses into each sentence. As a fun bonus for today, I also added an option to add r-r-r-random s-s-s-stutters to the text!
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-17
