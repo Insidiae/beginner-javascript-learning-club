@@ -331,3 +331,17 @@ In today's project, we practice more with the HTML5 Canvas to display the user's
 Today's project was a fun exercise that uses the array methods we've learned to transform some given text into _sArCaStIc tExT_. We also added a few more fun options like transforming each letter into weird Unicode characters and randomly adding pauses into each sentence. As a fun bonus for today, I also added an option to add r-r-r-random s-s-s-stutters to the text!
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-17
+
+### Day 18: July 7, 2022
+
+**What we've built:** A Shopping List that saves its contents to localStorage
+
+**My Notes:**
+
+Today's project introduces us to more advanced JS event concepts:
+
+- **Custom Events** - We can use the `dispatchEvent` method to create a `new CustomEvent()` that we can listen to like any other event. This lets us modularize our event handling logic, breaking them up into smaller independent pieces that we can use and reuse anytime.
+- **Event Delegation** - Since the `addEventListener()` method only works on elements that are _already present in the DOM_ when it runs, it means it's going to be a bit trickier to listen to events for _new elements_ we'll be adding (such as our shopping list items). With event delegation, we can listen to events on the _parent element_ that will contain the new elements, and then use `event.target` to correctly identify the individual items that we actually need to work with.
+- **`localStorage`** - A quick way to persist application state (aka our shopping list) even when the users reload our app!
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-18
