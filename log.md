@@ -345,3 +345,13 @@ Today's project introduces us to more advanced JS event concepts:
 - **`localStorage`** - A quick way to persist application state (aka our shopping list) even when the users reload our app!
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-18
+
+### Day 19: July 8, 2022
+
+**What we've built:** An Image Gallery with dismissable modals
+
+**My Notes:**
+
+Today's project expands upon the previous `Click-Outside Modal` project by having us build an image gallery with the same dismissable modal feature. We also set up the gallery project and took advantage of Closures so that we can use multiple galleries in the same page by simply calling the same `Gallery` function for each gallery component.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-19
