@@ -355,3 +355,13 @@ Today's project introduces us to more advanced JS event concepts:
 Today's project expands upon the previous `Click-Outside Modal` project by having us build an image gallery with the same dismissable modal feature. We also set up the gallery project and took advantage of Closures so that we can use multiple galleries in the same page by simply calling the same `Gallery` function for each gallery component.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-19
+
+### Day 20: July 9, 2022
+
+**What we've built:** A Slider with basic previous/next controls
+
+**My Notes:**
+
+We get more practice with the closure pattern we used yesterday to create a Slider component that can be reused multiple times in a page. We also used a few modern JS features such as destructuring arrays to quickly switch around the CSS classes for the previous/current/next slides and control flow operators (`||` or `??`) to wrap around the first and last slides.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-20
