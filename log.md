@@ -365,3 +365,17 @@ Today's project expands upon the previous `Click-Outside Modal` project by havin
 We get more practice with the closure pattern we used yesterday to create a Slider component that can be reused multiple times in a page. We also used a few modern JS features such as destructuring arrays to quickly switch around the CSS classes for the previous/current/next slides and control flow operators (`||` or `??`) to wrap around the first and last slides.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-20
+
+### Day 21: July 10, 2022
+
+**What we learned:** The basics of JS prototypes, and the `new` and `this` keywords
+
+**My Notes:**
+
+Having recently built two projects with the closure + instance pattern, it's time to dive deeper into what exactly we were doing with those previous projects and introduce the **prototype** system in JS. What we were doing in the Gallery and Slider projects was actually a crude implementation of this prototype system, in order to share logic between multiple instances of some given objects.
+
+In order to fully utilize JS prototypes, we start by adding the `new` keyword when we call the function that creates out instances (called the **constructor** function), which will now give us a special object representing the instance we just created. We can also add properties within that special object by using the `this` keyword, and create shared functions that can be accessed by the instances by referencing the constructor function and adding those shared function to its `prototype` property.
+
+We then take these concepts we just learned today and refactored our Gallery project to use the JS prototype system!
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-21
