@@ -379,3 +379,21 @@ In order to fully utilize JS prototypes, we start by adding the `new` keyword wh
 We then take these concepts we just learned today and refactored our Gallery project to use the JS prototype system!
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-21
+
+### Day 22: July 11, 2022
+
+**What we learned:** More info about JS prototypes, and the `bind`, `call`, and `apply` methods
+
+**My Notes:**
+
+Today's lectures explain why we added methods into the `Gallery.prototype` in yesterday's refactor: Just like any other object property, adding methods into an object instance consumes space, and the more instances we create the more space gets redundantly allocated for the same method. Adding the method to the object prototype instead will create one single copy of the method that can still be accessed by any instance of the object.
+
+With this knowledge at hand, we can now more confidently apply these topics and refactor our Slider project just like we did for the Gallery project yesterday.
+
+We also learn three more methods that help us take advantage of the `this` keyword:
+
+- `bind` - Creates a "copy" of a function where the value of `this` points to whatever was passed into `bind`.
+- `call` - Immediately calls the function and makes `this` point to the first argument passed into `call`. You can then pass any arguments into the original function by simply adding more arguments after the first one (or `...spread`-ing them if you've got an array of parameters)
+- `apply` - Pretty much exactly the same as `call`, the only difference being that you pass an _array_ of the parameters you want to pass into the original function instead of adding them one by one (or spreading) them.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-22
