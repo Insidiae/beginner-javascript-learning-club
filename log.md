@@ -397,3 +397,17 @@ We also learn three more methods that help us take advantage of the `this` keywo
 - `apply` - Pretty much exactly the same as `call`, the only difference being that you pass an _array_ of the parameters you want to pass into the original function instead of adding them one by one (or spreading) them.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-22
+
+### Day 23: July 12, 2022
+
+**What we learned:** Event Loop, Callback Hell, and Promises
+
+**My Notes:**
+
+Today we learn about writing _asynchronous code_ in JS, or code that runs outside of the main program flow. The simplest form of asynchronous code is using callback functions, for example when passing a callback to `setTimeout()`. This works, but can get really complicated especially once we need to chain multiple callbacks together, leading to a mess of nested callbacks (hence the term "Callback Hell").
+
+ES6 JS introduces us to **Promises**, which are special values that can `resolve` after some time (or `reject` if an error is encountered). Instead of nesting callbacks, we can use the `.then()` method on a promise to handle the `resolve`d values. We can also use `Promise.all()` to handle multiple promises at the same time, or `Promise.race()` to only get the first one to resolve.
+
+When a promise is `reject`ed, it throws an error for us to catch using the `.catch()` method. When chaining multiple promises after another, we only need one `.catch()` at the end of the chain to handle rejections anywhere along the chain. If we have multiple promises and want to group them together without needing to ensure they are all `resolve`d, we can use `Promise.allSettled()` instead.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-23
