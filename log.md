@@ -411,3 +411,13 @@ ES6 JS introduces us to **Promises**, which are special values that can `resolve
 When a promise is `reject`ed, it throws an error for us to catch using the `.catch()` method. When chaining multiple promises after another, we only need one `.catch()` at the end of the chain to handle rejections anywhere along the chain. If we have multiple promises and want to group them together without needing to ensure they are all `resolve`d, we can use `Promise.allSettled()` instead.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-23
+
+### Day 24: July 13, 2022
+
+**What we learned:** Async + Await
+
+**My Notes:**
+
+Wes has [a talk about Async + Await](https://www.youtube.com/watch?v=DwQJ_NPQWWo) that explains this topic far better than I can in these notes 😅
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-24
