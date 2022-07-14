@@ -421,3 +421,13 @@ When a promise is `reject`ed, it throws an error for us to catch using the `.cat
 Wes has [a talk about Async + Await](https://www.youtube.com/watch?v=DwQJ_NPQWWo) that explains this topic far better than I can in these notes 😅
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-24
+
+### Day 25: July 14, 2022
+
+**What we've built:** Prompt Popup, Animated Typing Text
+
+**My Notes:**
+
+We see the power of Promises and Async+Await in these two exercises. We use Promises to wait and resolve for the value of the prompt input, and Async+Await to handle multi-step prompts and enforce a sequence of animation events like closing the popup and displaying text one letter at a time.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-25
