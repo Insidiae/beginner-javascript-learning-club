@@ -431,3 +431,15 @@ Wes has [a talk about Async + Await](https://www.youtube.com/watch?v=DwQJ_NPQWWo
 We see the power of Promises and Async+Await in these two exercises. We use Promises to wait and resolve for the value of the prompt input, and Async+Await to handle multi-step prompts and enforce a sequence of animation events like closing the popup and displaying text one letter at a time.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-25
+
+### Day 26: July 15, 2022
+
+**What we learned:** Fetching data in JS
+
+**My Notes:**
+
+Today we learn the most essential use case for Async+Await: Fetching external data from the internet. We use the built-in `fetch()` API to make the network request and get some data. Since network requests like these take time, the `fetch()` API returns a Promise which we can `await` when we actually need the data. We can then convert the data we get into a format we can work with, usually JSON.
+
+We also ran into some errors when fetching some data in today's exercise, caused by something called CORS. These CORS errors usually indicate issues with the backend server that we get our data from, and is beyond the scope of the course. Instead, we use a proxy server which temporarily bypasses these issues for development purposes.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-26
