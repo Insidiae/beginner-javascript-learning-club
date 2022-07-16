@@ -443,3 +443,16 @@ Today we learn the most essential use case for Async+Await: Fetching external da
 We also ran into some errors when fetching some data in today's exercise, caused by something called CORS. These CORS errors usually indicate issues with the backend server that we get our data from, and is beyond the scope of the course. Instead, we use a proxy server which temporarily bypasses these issues for development purposes.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-26
+
+### Day 27: July 16, 2022
+
+**What we've built':** A Dad Joke Generator and a Currency Converter
+
+**My Notes:**
+
+We get more practice with using `fetch()` in today's projects:
+
+- **Dad Jokes:** We used some publicly available API and displayed the returned data directly into the page. We also take advantage of `async`/`await` to display a loading indicator while we the request is in progress.
+- **Currency Converter:** Again we used a public API, but we also used a more clever way in making our `fetch()` requests, saving the exchange rates into a (temporary) cache so that we don't have to make redundant requests for the same base currency.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-27
