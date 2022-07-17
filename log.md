@@ -456,3 +456,13 @@ We get more practice with using `fetch()` in today's projects:
 - **Currency Converter:** Again we used a public API, but we also used a more clever way in making our `fetch()` requests, saving the exchange rates into a (temporary) cache so that we don't have to make redundant requests for the same base currency.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-27
+
+### Day 28: July 17, 2022
+
+**What we learned:** ES Modules
+
+**My Notes:**
+
+We learned how to split off our JS code into modules, or smaller JS files that contain specific code to help us keep our projects more organized and maintainable. We also learned how to reference code from other modules by `export`ing variables and/or functions which can then be `import`ed in other files. Today's exercises also give us an insight on how to structure larger JS projects by refactoring the Dad Jokes and Currency Converter projects.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-28
