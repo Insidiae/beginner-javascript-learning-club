@@ -466,3 +466,15 @@ We get more practice with using `fetch()` in today's projects:
 We learned how to split off our JS code into modules, or smaller JS files that contain specific code to help us keep our projects more organized and maintainable. We also learned how to reference code from other modules by `export`ing variables and/or functions which can then be `import`ed in other files. Today's exercises also give us an insight on how to structure larger JS projects by refactoring the Dad Jokes and Currency Converter projects.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-28
+
+### Day 29: July 18, 2022
+
+**What we learned:** Bundling with Parcel, using NPM modules, and using tools to sanitize user inputs
+
+**My Notes:**
+
+If you've been using the Live Server VSCode extension to run our previous exercises, today we learn a more fully-featured tool that lets us do more than simply hosting a bunch of static files! With Parcel, we can bundle our modularized code into a single minified file that is much better suited for production. Parcel also lets us use JS Modules to its full potential by letting us install external modules from NPM.
+
+Being able to use NPM modules also lets us talk about securing our code, especially the importance of sanitizing the user inputs that may get translated into HTML that gets shown on the page. Parsing the user inputs as is leads us to a wide variety of vulnerabilities ranging from accidentally affecting the page's CSS styles, harmless pranks like displaying annoying alerts, or truly malicious stuff like automatically performing actions that the user didn't want. Fortunately, there are tools to help us cover these vulnerabilities, like the `dompurify` library that removes any potentially malicious code from user inputs before we convert them into HTML.
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-29
