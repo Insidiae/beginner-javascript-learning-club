@@ -478,3 +478,14 @@ If you've been using the Live Server VSCode extension to run our previous exerci
 Being able to use NPM modules also lets us talk about securing our code, especially the importance of sanitizing the user inputs that may get translated into HTML that gets shown on the page. Parsing the user inputs as is leads us to a wide variety of vulnerabilities ranging from accidentally affecting the page's CSS styles, harmless pranks like displaying annoying alerts, or truly malicious stuff like automatically performing actions that the user didn't want. Fortunately, there are tools to help us cover these vulnerabilities, like the `dompurify` library that removes any potentially malicious code from user inputs before we convert them into HTML.
 
 **Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-29
+
+### Day 30: July 19, 2022
+
+**What we've built:** Web Speech Colours Game, Audio Visualizer
+
+**My Notes:** We finish off this 30-day challenge with these last two projects, both of which use ES Modules!
+
+- The Web Speech Colours Game project uses the experimental `SpeechRecognition` browser API. It has a few configs we needed to set up, but from there we can use the usual events-based workflow and animate some elements depending on the words heard from the user.
+- The Audio Visualizer project uses the `mediaDevices` API to capture continuous audio from the user, and the `AudioContext` API to convert the audio into numeric time and frequency data. We then use these data to draw some nice-looking visualizations using the HTML5 Canvas!
+
+**Solution Link:** https://github.com/Insidiae/beginner-javascript-learning-club/tree/main/day-30
